@@ -30,7 +30,7 @@
         <div class="sidebar-brand"><img src="../assets/logo-mark.svg" alt="" width="40" height="40" /><div><strong>Huanghe Motors</strong><span>Content Admin</span></div></div>
         <button class="new-model" type="button" data-new-model>+ Add motorcycle</button>
         <nav class="model-list" data-model-list aria-label="Motorcycles"></nav>
-        <div class="sidebar-footer"><a href="../index.html" target="_blank" rel="noopener">Open website ↗</a><button type="button" data-logout>Sign out</button></div>
+        <div class="sidebar-footer"><a href="content.html">Website content</a><a href="operations.html">Leads & integrations</a><a href="../index.html" target="_blank" rel="noopener">Open website ↗</a><button type="button" data-logout>Sign out</button></div>
       </aside>
 
       <section class="workspace">
@@ -78,7 +78,7 @@
 
           <section class="panel media-panel">
             <div class="panel-heading"><div><span class="eyebrow">PHOTO MANAGER</span><h2>Motorcycle gallery</h2></div><label class="upload-button">+ Upload photos<input type="file" accept="image/jpeg,image/png,image/webp,image/avif" multiple data-upload hidden /></label></div>
-            <p class="panel-help">JPEG, PNG, WebP or AVIF · maximum 6 MB each. The main photo appears first on the public motorcycle page.</p>
+            <p class="panel-help">JPEG, PNG, WebP or AVIF · maximum 4 MB each on Netlify. The main photo appears first on the public motorcycle page.</p>
             <div class="upload-status" data-upload-status aria-live="polite"></div>
             <div class="media-grid" data-media-grid></div>
           </section>
@@ -92,5 +92,6 @@
     </section>
   </main>
   <script src="admin.js" defer></script>
+  <script src="photo-link.js" defer></script>
 </body>
 </html>
