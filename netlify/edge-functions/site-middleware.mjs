@@ -14,7 +14,11 @@ export default async (request, context) => {
   const type = headers.get('content-type') || '';
   if (!type.includes('text/html')) return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
   const html = await response.text();
-  return new Response(await transformHtml(html, url, response.status), { status: response.status, statusText: response.statusText, headers });
+  let transformed = await transformHtml(html, url, response.status);
+  if (url.pathname.startsWith('/admin/')) {
+    transformed = transformed.replace('</head>', '<style id="admin-hidden-guard">[hidden]{display:none!important}</style></head>');
+  }
+  return new Response(transformed, { status: response.status, statusText: response.statusText, headers });
 };
 
 export const config = {
