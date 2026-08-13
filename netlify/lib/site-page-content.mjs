@@ -20,6 +20,9 @@ export async function applySitePageContent(html, url, status = 200) {
     if ((url.pathname === '/admin/' || url.pathname === '/admin/index.html') && !html.includes('Website content')) {
       html = html.replace('<div class="sidebar-footer">', '<div class="sidebar-footer"><a href="content.html">Website content</a>');
     }
+    if ((url.pathname === '/admin/' || url.pathname === '/admin/index.html') && !html.includes('/admin/photo-link.js')) {
+      html = html.replace('</body>', '<script src="/admin/photo-link.js" defer></script></body>');
+    }
     return html;
   }
   if (status >= 400) return html;
