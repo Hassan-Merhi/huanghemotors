@@ -1,38 +1,33 @@
-# Huanghe Motors Lubumbashi — Wave 1
+# Huanghe Motors — Lubumbashi
 
-Wave 1 delivers Phases 1–3 of the Huanghe Motors website:
+Bilingual English/French showroom website for Huanghe Motors in Lubumbashi, DR Congo.
 
-- custom Huanghe Motors logo and visual identity
-- responsive, dependency-free website foundation
-- English/French language foundation with saved preference
-- homepage showroom experience
-- Eagle and Super catalogue structure
-- provisional manufacturer-range imagery
-- Lubumbashi dealer CTA structure
-- accessible mobile navigation and reduced-motion support
+## Wave 2 status
 
-## Important catalogue rule
+Wave 2 completes Phases 4–6:
 
-Eagle and Super are included because they were confirmed as Lubumbashi dealer ranges. The site intentionally does **not** invent engine sizes, prices, colours or technical specifications. Those should be filled from actual dealer records in the next catalogue/content wave.
+- dedicated Eagle product page
+- dedicated Super product page
+- bilingual EN/FR product and dealer content
+- language preference persisted across pages
+- bilingual page titles/descriptions for interior pages
+- dedicated Lubumbashi dealer page
+- responsive desktop/tablet/mobile layouts
+- transparent pending states for unconfirmed dealer specs, address, phone, WhatsApp and hours
+- homepage navigation connected to the new pages
 
-## Local preview
+The website deliberately does **not** guess the exact Eagle/Super specifications or use unrelated motorcycle photos as if they were dealer stock. Dealer-confirmed photography and inventory content can replace the presentation panels later without redesigning the pages.
+
+## Run locally
 
 ```bash
 npm run dev
 ```
 
-Then open http://localhost:4173.
+Then open `http://localhost:4173`.
 
-## Verification
+## Verify
 
 ```bash
 npm run check
 ```
-
-## Wave 2 inputs still needed
-
-- exact Lubumbashi dealer address
-- telephone / WhatsApp
-- official dealer email
-- real Eagle and Super photos
-- confirmed model specifications and available colours

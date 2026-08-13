@@ -1,0 +1,103 @@
+/* Wave 2 — product and Lubumbashi dealer pages */
+.desktop-nav a.is-current { color:#fff; }
+.product-page, .dealer-page { background:var(--bg); }
+.product-hero, .dealer-hero { padding:calc(var(--header) + 70px) clamp(20px,4vw,64px) 84px; min-height:760px; display:grid; align-items:center; background:radial-gradient(circle at 78% 38%,rgba(255,145,0,.13),transparent 30%),linear-gradient(135deg,#0b0d10,#11161d); }
+.product-hero-grid, .dealer-hero-grid { width:100%; max-width:var(--max); margin:auto; display:grid; grid-template-columns:minmax(0,.92fr) minmax(460px,1.08fr); gap:64px; align-items:center; }
+.back-link { display:inline-flex; align-items:center; gap:8px; color:#929aa3; font-size:13px; font-weight:800; margin-bottom:46px; }
+.back-link:hover { color:#fff; }
+.product-copy h1, .dealer-hero h1 { font-size:clamp(70px,9vw,138px); line-height:.86; letter-spacing:-.07em; margin:18px 0 28px; }
+.dealer-hero h1 { font-size:clamp(58px,7.2vw,108px); }
+.dealer-hero h1 em { display:block; font-style:normal; color:var(--accent); }
+.product-lead, .dealer-hero p { color:#b4bbc3; font-size:clamp(17px,1.5vw,21px); line-height:1.7; max-width:650px; }
+.product-status { display:flex; align-items:center; gap:11px; color:#dce0e4; font-size:13px; margin-top:28px; }
+.product-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:34px; }
+.product-stage { position:relative; min-height:600px; border-radius:34px; overflow:hidden; border:1px solid rgba(255,255,255,.12); background:linear-gradient(145deg,#161b21,#2b3036); box-shadow:0 40px 100px rgba(0,0,0,.4); display:grid; place-items:center; isolation:isolate; }
+.product-stage-super { background:linear-gradient(145deg,#17191d,#342f29); }
+.product-stage::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 50% 48%,rgba(255,157,0,.25),transparent 31%),linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px); background-size:auto,56px 56px,56px 56px; z-index:-2; }
+.product-stage::after { content:""; position:absolute; inset:auto 0 0; height:43%; background:linear-gradient(to top,rgba(4,5,6,.86),transparent); z-index:-1; }
+.stage-letter { font-size:clamp(210px,24vw,360px); font-weight:950; line-height:.7; letter-spacing:-.08em; color:rgba(255,255,255,.96); text-shadow:0 40px 90px rgba(0,0,0,.55); }
+.stage-brand { position:absolute; top:48%; left:50%; transform:translate(-50%,-50%) rotate(-8deg); color:var(--accent); font-size:14px; font-weight:950; letter-spacing:.28em; }
+.stage-orbit { position:absolute; border-radius:50%; border:1px solid rgba(255,170,40,.2); }
+.stage-orbit-one { width:410px; height:410px; }
+.stage-orbit-two { width:520px; height:520px; border-color:rgba(255,255,255,.08); }
+.stage-note { position:absolute; left:28px; right:28px; bottom:26px; display:grid; gap:6px; }
+.stage-note span { color:#ffbd54; font-size:10px; font-weight:900; letter-spacing:.16em; }
+.stage-note strong { font-size:14px; color:#d9dde2; font-weight:700; max-width:500px; line-height:1.45; }
+.product-details { background:var(--paper); color:var(--ink); padding:110px clamp(20px,4vw,64px); }
+.product-details-grid { max-width:var(--max); margin:auto; display:grid; grid-template-columns:.85fr 1.15fr; gap:90px; align-items:start; }
+.details-intro h2 { font-size:clamp(42px,5vw,70px); line-height:.98; letter-spacing:-.05em; margin:14px 0 24px; }
+.details-intro p { color:#70757b; line-height:1.75; font-size:16px; }
+.spec-list { border-top:1px solid #d8d4cc; }
+.spec-row { display:grid; grid-template-columns:.55fr 1fr; gap:30px; padding:22px 0; border-bottom:1px solid #d8d4cc; }
+.spec-row span { color:#7b8086; font-size:13px; }
+.spec-row strong { font-size:14px; }
+.product-feature-strip { max-width:var(--max); margin:auto; padding:90px clamp(20px,4vw,64px); display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.product-feature-strip article, .showroom-promise article { min-height:260px; border:1px solid var(--line); border-radius:24px; padding:28px; display:flex; flex-direction:column; }
+.product-feature-strip article > span, .showroom-promise article > span { color:#7e8790; font-size:11px; letter-spacing:.16em; }
+.product-feature-strip strong { margin-top:auto; font-size:24px; }
+.product-feature-strip p { color:#9da5ae; line-height:1.6; margin-bottom:0; }
+.product-next { max-width:var(--max); margin:0 auto 100px; border-radius:32px; padding:48px 54px; background:linear-gradient(120deg,#d66700,#ffad25); color:#111; display:flex; justify-content:space-between; align-items:end; gap:30px; }
+.product-next .kicker { color:#3f2808; }
+.product-next h2 { font-size:clamp(50px,7vw,88px); letter-spacing:-.06em; line-height:.9; margin:10px 0 0; }
+.product-next .button-primary { background:#101216; color:#fff; box-shadow:none; }
+.dealer-hero-grid { grid-template-columns:1.1fr .9fr; }
+.dealer-identity-card { min-height:480px; border:1px solid rgba(255,255,255,.12); border-radius:34px; padding:38px; background:linear-gradient(145deg,#171b20,#0d0f12); box-shadow:0 35px 100px rgba(0,0,0,.4); display:flex; flex-direction:column; justify-content:space-between; }
+.dealer-identity-card div { display:grid; gap:7px; }
+.dealer-identity-card span { color:#ffb344; font-size:11px; font-weight:900; letter-spacing:.18em; }
+.dealer-identity-card strong { font-size:clamp(42px,5vw,68px); letter-spacing:-.05em; }
+.dealer-identity-card small { color:#808892; letter-spacing:.15em; }
+.dealer-info-section { background:var(--paper); color:var(--ink); padding:110px clamp(20px,4vw,64px); }
+.dealer-info-grid { max-width:var(--max); margin:auto; display:grid; grid-template-columns:1.05fr .95fr; gap:70px; align-items:start; }
+.dealer-info-copy h2 { font-size:clamp(42px,5vw,70px); line-height:.98; letter-spacing:-.05em; margin:14px 0 22px; }
+.dealer-info-copy > p { color:#71767b; max-width:710px; line-height:1.75; }
+.contact-cards { display:grid; gap:12px; margin-top:34px; }
+.contact-cards article { border:1px solid #dedad2; border-radius:18px; background:#fff; padding:20px 22px; display:grid; gap:5px; }
+.contact-cards span { color:#8a8f94; font-size:11px; font-weight:900; letter-spacing:.1em; text-transform:uppercase; }
+.contact-cards strong { font-size:17px; }
+.contact-cards small { color:#858a8f; }
+.city-map-card { min-height:540px; border-radius:28px; background:#12161b; overflow:hidden; position:sticky; top:110px; }
+.city-map-visual { min-height:540px; position:relative; display:grid; place-items:center; background:radial-gradient(circle at 50% 50%,rgba(255,157,0,.18),transparent 28%),linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px); background-size:auto,42px 42px,42px 42px; overflow:hidden; }
+.map-ring { position:absolute; width:280px; height:280px; border-radius:50%; border:1px solid rgba(255,166,30,.35); }
+.ring-two { width:430px; height:430px; border-color:rgba(255,255,255,.08); }
+.map-pin { width:80px; height:80px; border-radius:50%; background:#ff9f0a; box-shadow:0 0 0 18px rgba(255,159,10,.08); display:grid; place-items:center; z-index:2; }
+.map-pin img { width:46px; }
+.map-label { position:absolute; left:28px; bottom:26px; color:#fff; display:grid; gap:5px; }
+.map-label strong { font-size:28px; }
+.map-label span { color:#929ba4; font-size:12px; }
+.showroom-promise { max-width:var(--max); margin:auto; padding:90px clamp(20px,4vw,64px); display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.showroom-promise h3 { margin-top:auto; margin-bottom:8px; font-size:24px; }
+.showroom-promise p { color:#9da5ae; line-height:1.6; margin-bottom:0; }
+.dealer-range-cta { max-width:var(--max); margin:0 auto 100px; border-radius:32px; padding:50px 54px; background:#f0ede6; color:#111; display:flex; justify-content:space-between; align-items:end; gap:30px; }
+.dealer-range-cta h2 { font-size:clamp(50px,6vw,82px); letter-spacing:-.06em; line-height:.9; margin:12px 0 18px; }
+.dealer-range-cta h2 span { color:#d96b00; }
+.dealer-range-cta p { color:#73777c; max-width:640px; line-height:1.6; }
+.dealer-range-actions { display:flex; gap:10px; flex-wrap:wrap; }
+.dealer-range-cta .button-ghost { border-color:#c8c4bd; }
+
+@media (max-width:980px) {
+  .product-hero, .dealer-hero { min-height:auto; padding-top:130px; }
+  .product-hero-grid, .dealer-hero-grid, .product-details-grid, .dealer-info-grid { grid-template-columns:1fr; gap:48px; }
+  .product-stage { min-height:520px; }
+  .product-feature-strip, .showroom-promise { grid-template-columns:1fr; }
+  .product-feature-strip article, .showroom-promise article { min-height:220px; }
+  .city-map-card { position:relative; top:auto; min-height:430px; }
+  .city-map-visual { min-height:430px; }
+}
+@media (max-width:720px) {
+  .product-hero, .dealer-hero { padding:112px 20px 60px; }
+  .back-link { margin-bottom:34px; }
+  .product-copy h1 { font-size:clamp(68px,25vw,100px); }
+  .dealer-hero h1 { font-size:clamp(52px,16vw,76px); }
+  .product-stage { min-height:420px; border-radius:24px; }
+  .stage-letter { font-size:210px; }
+  .stage-orbit-one { width:280px; height:280px; }
+  .stage-orbit-two { width:360px; height:360px; }
+  .product-details, .dealer-info-section { padding:78px 20px; }
+  .product-details-grid { gap:38px; }
+  .spec-row { grid-template-columns:1fr; gap:7px; }
+  .product-feature-strip, .showroom-promise { padding:70px 20px; }
+  .product-next, .dealer-range-cta { margin:0 20px 70px; padding:34px 28px; flex-direction:column; align-items:flex-start; }
+  .dealer-identity-card { min-height:360px; padding:28px; }
+  .dealer-range-actions { width:100%; }
+  .dealer-range-actions .button { flex:1; }
+}
