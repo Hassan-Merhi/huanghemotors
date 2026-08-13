@@ -7,18 +7,21 @@
     'site-dealership-showroom': 'Website Photo · Dealership Showroom',
   };
   const name = names[slug];
-  if (!name) return;
+  const internalNames = new Set(Object.values(names));
   let tries = 0;
   const timer = setInterval(() => {
     tries += 1;
-    const target = [...document.querySelectorAll('.model-item')].find((button) => button.textContent.includes(name));
+    const buttons = [...document.querySelectorAll('.model-item')];
+    if (!buttons.length && tries <= 50) return;
+    const target = name ? buttons.find((button) => button.textContent.includes(name)) : null;
     if (target) {
       target.click();
       const danger = document.querySelector('[data-danger-zone]');
       if (danger) danger.hidden = true;
-      clearInterval(timer);
-    } else if (tries > 50) {
-      clearInterval(timer);
     }
+    for (const button of buttons) {
+      if ([...internalNames].some((internalName) => button.textContent.includes(internalName))) button.hidden = true;
+    }
+    if (buttons.length || tries > 50) clearInterval(timer);
   }, 100);
 })();
