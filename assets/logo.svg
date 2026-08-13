@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 504 116" role="img" aria-labelledby="title desc">
+  <title id="title">Huanghe Motors</title><desc id="desc">Huanghe Motors Lubumbashi wordmark</desc>
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#ffb100"/><stop offset="1" stop-color="#ff5a1f"/></linearGradient></defs>
+  <g transform="translate(2 2)">
+    <path d="M54 4 98 28v52L54 104 10 80V28L54 4Z" fill="#0b0d10" stroke="url(#g)" stroke-width="4"/>
+    <path d="M28 31h12v17h28V31h12v45H68V59H40v17H28V31Z" fill="#fff"/>
+    <path d="M49 59h11l-7 17H42l7-17Zm16-28h11L60 59H49l16-28Z" fill="url(#g)"/>
+  </g>
+  <g fill="#fff" font-family="Arial, Helvetica, sans-serif">
+    <text x="124" y="61" font-size="43" font-weight="800" letter-spacing="2">HUANGHE</text>
+    <text x="126" y="91" font-size="20" font-weight="700" letter-spacing="8" fill="#ffb100">MOTORS</text>
+  </g>
+</svg>
