@@ -21,12 +21,14 @@
     updateStockBadge();
     document.addEventListener('click', interceptContactLinks);
     document.addEventListener('huanghe:language', refreshText);
+    document.addEventListener('click', event => { if (event.target.closest('[data-lang]')) setTimeout(refreshText, 0); });
   }
 
   function currentModel() {
     const page=document.body.dataset.page;
-    if (page && !['dealership'].includes(page)) return page;
     const q=new URLSearchParams(location.search).get('model');
+    if (page === 'motorcycle' && q) return q;
+    if (page && !['dealership','motorcycle'].includes(page)) return page;
     if (q) return q;
     return '';
   }
