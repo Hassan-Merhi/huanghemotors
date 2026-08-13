@@ -14,6 +14,8 @@
     const target = [...document.querySelectorAll('.model-item')].find((button) => button.textContent.includes(name));
     if (target) {
       target.click();
+      const danger = document.querySelector('[data-danger-zone]');
+      if (danger) danger.hidden = true;
       clearInterval(timer);
     } else if (tries > 50) {
       clearInterval(timer);
