@@ -1,13 +1,13 @@
 {
   "name": "huanghe-motors-lubumbashi",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": true,
   "description": "Huanghe Motors Lubumbashi bilingual showroom with Netlify Functions, Database, Blobs, admin CMS, leads and Moto Track sync",
   "scripts": {
     "build": "node scripts/build-netlify.mjs",
     "dev": "netlify dev",
     "test": "node scripts/verify.mjs && node scripts/verify-wave4.mjs && node scripts/verify-wave5.mjs && node scripts/verify-netlify.mjs",
-    "check": "npm run test && node --check netlify/functions/api.mjs && node --check netlify/functions/media.mjs && node --check netlify/functions/robots.mjs && node --check netlify/functions/sitemap.mjs && node --check netlify/functions/mototrack-sync.mjs && node --check netlify/edge-functions/site-middleware.mjs && node --check netlify/lib/api.mjs && node --check netlify/lib/auth.mjs && node --check netlify/lib/seo.mjs && node --check admin/admin.js && node --check admin/operations.js && node --check assets/cms.js && node --check assets/wave4.js"
+    "check": "npm run test && node --check netlify/functions/api.mjs && node --check netlify/functions/media.mjs && node --check netlify/functions/robots.mjs && node --check netlify/functions/sitemap.mjs && node --check netlify/functions/mototrack-sync.mjs && node --check netlify/functions/site-content-admin.mjs && node --check netlify/edge-functions/site-middleware.mjs && node --check netlify/edge-functions/site-content-middleware.mjs && node --check netlify/lib/api.mjs && node --check netlify/lib/auth.mjs && node --check netlify/lib/seo.mjs && node --check netlify/lib/site-render.mjs && node --check netlify/lib/site-page-content.mjs && node --check admin/admin.js && node --check admin/content.js && node --check admin/photo-link.js && node --check admin/operations.js && node --check assets/cms.js && node --check assets/site-content.js && node --check assets/wave4.js"
   },
   "dependencies": {
     "@netlify/blobs": "^10.7.10",
