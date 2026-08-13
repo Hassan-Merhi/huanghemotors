@@ -17,11 +17,15 @@ const FALLBACK_IMAGES = {
 
 export async function applySitePageContent(html, url, status = 200) {
   if (url.pathname.startsWith('/admin/')) {
-    if ((url.pathname === '/admin/' || url.pathname === '/admin/index.html') && !html.includes('Website content')) {
+    const isMainAdmin = url.pathname === '/admin/' || url.pathname === '/admin/index.html';
+    if (isMainAdmin && !html.includes('Website content')) {
       html = html.replace('<div class="sidebar-footer">', '<div class="sidebar-footer"><a href="content.html">Website content</a>');
     }
-    if ((url.pathname === '/admin/' || url.pathname === '/admin/index.html') && !html.includes('/admin/photo-link.js')) {
+    if (isMainAdmin && !html.includes('/admin/photo-link.js')) {
       html = html.replace('</body>', '<script src="/admin/photo-link.js" defer></script></body>');
+    }
+    if (isMainAdmin && !html.includes('/admin/login-ui-recovery.js')) {
+      html = html.replace('</body>', '<script src="/admin/login-ui-recovery.js" defer></script></body>');
     }
     return html;
   }
