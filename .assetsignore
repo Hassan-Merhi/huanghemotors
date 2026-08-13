@@ -1,0 +1,14 @@
+.git
+.github
+node_modules
+worker
+migrations
+scripts
+tests
+*.md
+package.json
+package-lock.json
+wrangler*.jsonc
+.gitignore
+.dev.vars*
+*.zip
