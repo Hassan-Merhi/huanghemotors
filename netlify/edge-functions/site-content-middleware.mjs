@@ -6,7 +6,10 @@ export default async (request, context) => {
   const type = response.headers.get('content-type') || '';
   if (!type.includes('text/html')) return response;
   const html = await response.text();
-  const transformed = await applySitePageContent(html, url, response.status);
+  let transformed = await applySitePageContent(html, url, response.status);
+  if (!transformed.includes('/assets/site-content.css')) {
+    transformed = transformed.replace('</head>', '<link rel="stylesheet" href="/assets/site-content.css"></head>');
+  }
   return new Response(transformed, response);
 };
 
