@@ -86,3 +86,5 @@ npm run check
 ```
 
 GitHub Actions runs the same repository verification on pushes/PRs.
+
+Final UX verification also covers immediate EN/FR refresh of the Wave 4 inquiry/WhatsApp controls and correct model detection on generic `motorcycle.html?model=` pages.
