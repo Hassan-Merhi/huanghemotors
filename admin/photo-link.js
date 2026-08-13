@@ -6,22 +6,33 @@
     'site-heritage-side': 'Website Photo · Heritage Side',
     'site-dealership-showroom': 'Website Photo · Dealership Showroom',
   };
-  const name = names[slug];
+  const targetName = names[slug] || '';
   const internalNames = new Set(Object.values(names));
-  let tries = 0;
-  const timer = setInterval(() => {
-    tries += 1;
-    const buttons = [...document.querySelectorAll('.model-item')];
-    if (!buttons.length && tries <= 50) return;
-    const target = name ? buttons.find((button) => button.textContent.includes(name)) : null;
-    if (target) {
+  const list = document.querySelector('[data-model-list]');
+  if (!list) return;
+
+  let targetOpened = false;
+
+  function processList() {
+    const buttons = [...list.querySelectorAll('.model-item')];
+    const target = targetName ? buttons.find((button) => button.textContent.includes(targetName)) : null;
+
+    if (target && !targetOpened) {
+      targetOpened = true;
       target.click();
       const danger = document.querySelector('[data-danger-zone]');
       if (danger) danger.hidden = true;
     }
+
     for (const button of buttons) {
-      if ([...internalNames].some((internalName) => button.textContent.includes(internalName))) button.hidden = true;
+      if ([...internalNames].some((name) => button.textContent.includes(name))) {
+        button.hidden = true;
+        button.dataset.internalModel = 'true';
+        button.setAttribute('aria-hidden', 'true');
+      }
     }
-    if (buttons.length || tries > 50) clearInterval(timer);
-  }, 100);
+  }
+
+  processList();
+  new MutationObserver(processList).observe(list, { childList: true });
 })();
