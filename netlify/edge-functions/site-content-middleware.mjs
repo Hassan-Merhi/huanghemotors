@@ -1,0 +1,16 @@
+import { applySitePageContent } from '../lib/site-page-content.mjs';
+
+export default async (request, context) => {
+  const url = new URL(request.url);
+  const response = await context.next();
+  const type = response.headers.get('content-type') || '';
+  if (!type.includes('text/html')) return response;
+  const html = await response.text();
+  const transformed = await applySitePageContent(html, url, response.status);
+  return new Response(transformed, response);
+};
+
+export const config = {
+  path: '/*',
+  excludedPath: ['/api/*', '/media/*', '/assets/*', '/.netlify/*', '/robots.txt', '/sitemap.xml'],
+};
