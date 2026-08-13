@@ -1,11 +1,14 @@
-# Visual source notes
+# Source notes
 
-Wave 1 uses provisional Huanghe manufacturer-range imagery as visual placeholders in the homepage. These images are not labelled as Eagle or Super because those model-specific photographs have not yet been supplied.
+## Huanghe brand/manufacturer context
 
-Provisional external images:
+Wave 2 research verified that Huanghe is associated with Chongqing Huanghe Motorcycle Co., Ltd., and that documented Huanghe two-wheel motorcycles include HH-series models. These sources are used only for general brand/manufacturer context:
 
-- https://italian.cargo-motorcycle.com/photo/pl114951238-3_wheel_cargo_motorcycle_200cc_engine_2_0m_cargo_box_motorized_tricycle_for_loading_heavy_goods.jpg
-- https://french.cargo-motorcycle.com/photo/pl27484960-army_200cc_cargo_tricycle_fuel_three_wheeler_cargo_for_merchants_and_farmers.jpg
-- https://italian.cargo-motorcycle.com/photo/pl114951237-3_wheel_cargo_motorcycle_200cc_engine_2_0m_cargo_box_motorized_tricycle_for_loading_heavy_goods.jpg
+- Chongqing Longkang / Huanghe company profile: https://www.cargo-motorcycle.com/aboutus.html
+- Auto-Che Huanghe motorcycle range: https://auto-che.com/b/sinotruk-huanghe/motorcycle.html
 
-Before final production launch, replace these with dealer-owned or manufacturer-authorised local assets so the site is not dependent on hotlinked third-party media.
+## Eagle and Super
+
+Search results do not provide reliable evidence that a random online “Eagle” or “Super” motorcycle is the exact Huanghe variant sold by the Lubumbashi dealer. Therefore Wave 2 does not copy those unrelated specifications or images into the Eagle/Super product pages.
+
+Exact dealer photographs, engine details, colours, prices, phone/WhatsApp, street address and opening hours should be populated only from dealer-confirmed information.
